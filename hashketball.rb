@@ -223,3 +223,7 @@ def player_with_longest_name
   end
   return longest_name
 end
+
+def long_name_steals_a_ton
+  player_with_longest_name == sort_player_by_stat(:points)[-1][:steals]
+end
