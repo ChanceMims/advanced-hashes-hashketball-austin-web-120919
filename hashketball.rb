@@ -188,3 +188,7 @@ def sort_player_by_stat(key_to_compare)
     memo[key_to_compare]
   end
 end
+
+def big_shoe_rebounds
+  return sort_player_by_stat(:shoe)[-1][:rebounds]
+end
