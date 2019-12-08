@@ -200,9 +200,11 @@ end
 def winning_team
   home_total = get_array_of_player_hashes("home").reduce(nil) do |memo|
   memo += memo[:points]
+  memo
 end
   away_total = get_array_of_player_hashes("away").reduce(nil) do |memo|
     memo += memo[:points]
+    memo
   end
   if home_total > away_total
     return game_hash[:home][:team_name]
