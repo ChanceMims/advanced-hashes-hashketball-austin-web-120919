@@ -220,4 +220,5 @@ def player_with_longest_name
       longest_name = memo[:player_name]
     end
   end
+  return longest_name
 end
