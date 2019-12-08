@@ -192,3 +192,7 @@ end
 def big_shoe_rebounds
   return sort_player_by_stat(:shoe)[-1][:rebounds]
 end
+
+def most_points_scored
+  return sort_player_by_stat(:points)[-1]
+end
