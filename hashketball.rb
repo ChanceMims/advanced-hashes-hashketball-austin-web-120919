@@ -212,3 +212,12 @@ end
     return game_hash[:away][:team_name]
   end
 end
+
+def player_with_longest_name
+  get_array_of_player_hashes("all").each do |memo|
+    longest_name = memo[:player_name] if !longest_name
+    if longest_name.length < memo[:player_name].length
+      longest_name = memo[:player_name]
+    end
+  end
+end
