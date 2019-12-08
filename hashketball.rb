@@ -154,8 +154,8 @@ end
 
 def team_names
   team_array = []
-  team_array << game_hash[:home]
-  team_array << game_hash[:away]
+  team_array << game_hash[:home][:team_name]
+  team_array << game_hash[:away][:team_name]
   return team_array
 end
 
