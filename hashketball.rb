@@ -214,6 +214,7 @@ end
 end
 
 def player_with_longest_name
+  longest_name = nil
   get_array_of_player_hashes("all").each do |memo|
     longest_name = memo[:player_name] if !longest_name
     if longest_name.length < memo[:player_name].length
