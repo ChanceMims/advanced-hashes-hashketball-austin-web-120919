@@ -196,3 +196,17 @@ end
 def most_points_scored
   return sort_player_by_stat(:points)[-1][:player_name]
 end
+
+def winning_team
+  home_total = get_array_of_player_hashes("home").reduce(nil) do |memo|
+  memo += memo[:points]
+end
+  away_total = get_array_of_player_hashes("away").reduce(nil) do |memo|
+    memo += memo[:points]
+  end
+  if home_total > away_total
+    return game_hash[:home][:team_name]
+  else
+    return game_hash[:away][:team_name]
+  end
+end
